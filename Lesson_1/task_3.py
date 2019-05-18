@@ -7,12 +7,17 @@ y_1 = int(input('Введите y_1:'))
 x_2 = int(input('Введите x_2:'))
 y_2 = int(input('Введите y_2:'))
 
-k = (y_2 - y_1) / (x_2 - x_1)
-b = y_1 - k * x_1
-
-if b >= 0:
-    ans = f'y = {k} x + {b}'
+if x_1 == x_2:
+    ans = f'x = {x_1}'
+elif y_1 == y_2:
+    ans = f'y = {y_1}'
 else:
-    ans = f'y = {k} x - {abs(b)}'
+    k = (y_2 - y_1) / (x_2 - x_1)
+    b = y_1 - k * x_1
+
+    if b >= 0:
+        ans = f'y = {k} x + {b}'
+    else:
+        ans = f'y = {k} x - {abs(b)}'
 
 print(ans)
