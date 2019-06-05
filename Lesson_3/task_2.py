@@ -15,7 +15,7 @@ lst_b = []
 i = 0
 
 while i < len(lst_a):
-    if lst_a[i] != 0 and lst_a[i] % 2 == 0:
+    if lst_a[i] % 2 == 0:
         lst_b.append(i)
     i += 1
 
