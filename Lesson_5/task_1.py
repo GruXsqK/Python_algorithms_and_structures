@@ -21,7 +21,7 @@ for itm in range(1, num_firms + 1):
         sum_quarts += quarts[value]
 
     sum_avg += sum_quarts
-    firms_lst[itm] = Firm(name, quarts[1], quarts[2], quarts[3], quarts[4], sum_quarts)
+    firms_lst[itm] = Firm(name, *quarts, sum_quarts)
 
 sum_avg /= num_firms
 ab_avg_year = []
@@ -35,8 +35,6 @@ for key in firms_lst:
 
 print(f'Средняя прибыль за год: {sum_avg}')
 print('Предприятия с выручкой выше среднего:')
-for itm in ab_avg_year:
-    print(itm)
+print(*ab_avg_year)
 print('Предприятия с выручкой ниже среднего:')
-for itm in bl_avg_year:
-    print(itm)
+print(*bl_avg_year)
