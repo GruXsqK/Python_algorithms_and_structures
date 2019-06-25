@@ -37,8 +37,6 @@ def size_of_memory(dct_vars):
                 for itm in value.items():
                     sum_size += sys.getsizeof(itm, default=0)
             elif not isinstance(value, str):
-                pass
-            else:
                 for itm in value:
                     sum_size += sys.getsizeof(itm, default=0)
         except TypeError:
@@ -128,22 +126,22 @@ def task_edition_3():
 
 
 # При MIN_NUMB = 0, MAX_NUMB = 100, COUNT_NUMB = 500
-# size of vars in task_edition_1() = 18210          100 loops, best of 5: 954 usec per loop
-# size of vars in task_edition_2() = 14138          100 loops, best of 5: 710 usec per loop
-# size of vars in task_edition_2_2() = 2954         100 loops, best of 5: 668 usec per loop
-# size of vars in task_edition_3() = 7598          100 loops, best of 5: 882 usec per loop
+# size of vars in task_edition_1() = 29454          100 loops, best of 5: 954 usec per loop
+# size of vars in task_edition_2() = 11474          100 loops, best of 5: 710 usec per loop
+# size of vars in task_edition_2_2() = 290          100 loops, best of 5: 668 usec per loop
+# size of vars in task_edition_3() = 18842          100 loops, best of 5: 882 usec per loop
 #
 # При MIN_NUMB = 0, MAX_NUMB = 100, COUNT_NUMB = 50000
-# size of vars in task_edition_1() = 414262        100 loops, best of 5: 89.4 msec per loop
-# size of vars in task_edition_2() = 14190          100 loops, best of 5: 66.1 msec per loop
-# size of vars in task_edition_2_2() = 3006         100 loops, best of 5: 65 msec per loop
-# size of vars in task_edition_3() = 436890        100 loops, best of 5: 91.6 msec per loop
+# size of vars in task_edition_1() = 1809536        100 loops, best of 5: 89.4 msec per loop
+# size of vars in task_edition_2() = 11476          100 loops, best of 5: 66.1 msec per loop
+# size of vars in task_edition_2_2() = 292          100 loops, best of 5: 65 msec per loop
+# size of vars in task_edition_3() = 1832164        100 loops, best of 5: 91.6 msec per loop
 
 # При MIN_NUMB = 0, MAX_NUMB = 10000, COUNT_NUMB = 500
-# size of vars in task_edition_1() = 56726          100 loops, best of 5: 1.18 msec per loop
-# size of vars in task_edition_2() = 52654          100 loops, best of 5: 954 usec per loop
-# size of vars in task_edition_2_2() = 3006         100 loops, best of 5: 773 usec per loop
-# size of vars in task_edition_3() = 7598          100 loops, best of 5: 947 usec per loop
+# size of vars in task_edition_1() = 67948          100 loops, best of 5: 1.18 msec per loop
+# size of vars in task_edition_2() = 49940          100 loops, best of 5: 954 usec per loop
+# size of vars in task_edition_2_2() = 292          100 loops, best of 5: 773 usec per loop
+# size of vars in task_edition_3() = 18870          100 loops, best of 5: 947 usec per loop
 
 print('Память для task_edition_1 =', task_edition_1())           # te_1
 print('Память для task_edition_2 =', task_edition_2())           # te_2
