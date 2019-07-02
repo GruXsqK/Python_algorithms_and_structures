@@ -12,14 +12,19 @@ from random import randint
 def bubble_sort(array, flag=True):
     n = 1
     while n < len(array):
-        for i in range(len(array) - n):     # n - самое очевидное улучшение алгоритма
+        change = 0
+        for i in range(len(array) - n):
             if not flag:
                 if array[i] < array[i + 1]:
                     array[i], array[i + 1] = array[i + 1], array[i]
+                    change += 1
             else:
                 if array[i] > array[i + 1]:
                     array[i], array[i + 1] = array[i + 1], array[i]
+                    change += 1
         n += 1
+        if change == 0:
+            break
     return array
 
 
